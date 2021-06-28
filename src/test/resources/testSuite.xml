@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Smoke test">
+    <test name="Checking of the login form">
+        <classes>
+            <class name="tests.LoginTest">
+                <methods>
+                    <parameter name="username" value="Prymakmaryna90@gmail.com"/>
+                    <parameter name="password" value="Prymakmaryna90"/>
+                    <include name="validAuthentication"/>
+                    <include name="enterEmptyPassword"/>
+                    <include name="enterEmptyEmail"/>
+                    <include name="enterEmptyEmailAndEmptyPassword"/>
+                    <include name="enterInvalidPassword"/>
+                    <include name="enterInvalidEmail"/>
+                    <include name="enterInvalidEmailAndInvalidPassword"/>
+                    <include name="enterInvalidEmailScript"/>
+                    <include name="enterInvalidEmailHTMLTag"/>
+                    <include name="enterInvalidEmailDifferentSymbols"/>
+                    <include name="enterInvalidEmailWithSeveralWhiteSpaces"/>
+                    <include name="enterWhiteSpacesAndCorrectEmail"/>
+                    <include name="enterCorrectEmailAndSeveralWhiteSpaces"/>
+                    <include name="enterPasswordWithDifferentCaseLetters"/>
+                    <include name="enterLoginWithDifferentCaseLetters"/>
+                    <include name="enterLogout"/>
+                    <include name="clickForgotPassword"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Calculating of the Workout Calculators Form">
+        <classes>
+            <class name="tests.WorkoutCalculatorsTest">
+                <methods>
+                    <include name="fillingWorkoutCalculatorsForm"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Filling run form">
+        <classes>
+            <class name="tests.RunTest">
+                <methods>
+                    <include name="fillingRunForm"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Checking of the dropdown menu in the calendar">
+        <classes>
+            <class name="tests.CalendarTest">
+                <methods>
+                    <include name="viewRunWorkout"/>
+                    <include name="updateRunWorkout"/>
+                    <include name="commentsRunWorkout"/>
+                    <include name="uploadDataRunWorkout"/>
+                    <include name="painInjuryHeadacheRunWorkout"/>
+                    <include name="moveRace"/>
+                    <include name="copyRunWorkout"/>
+                    <include name="deleteRunWorkout"/>
+                    <include name="printRunWorkout"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Viewing report form">
+        <classes>
+            <class name="tests.ReportStatisticsTest">
+                <methods>
+                    <include name="fillingReportForm"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Printing form">
+        <classes>
+            <class name="tests.PrintWorkoutsTest">
+                <methods>
+                    <include name="printRunWorkout"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Viewing of the training volume">
+        <classes>
+            <class name="tests.DashboardTest">
+                <methods>
+                    <include name="viewTrainingVolume"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
